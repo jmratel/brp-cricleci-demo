@@ -15,8 +15,6 @@ mm.log
 #SFDX
 .sfdx/
 .forceCode/
-sfdx-project.json
-force.json
 
 #VS Code
 .vscode/
