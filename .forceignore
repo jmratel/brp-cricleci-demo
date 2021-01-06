@@ -1,0 +1,51 @@
+**AppSwitcher
+**/authproviders
+#Applications
+**/applications/standard__*
+**/connectedApps/*
+#**profiles
+
+#Objects
+**/objects/DuplicateRecordSet
+**/objects/ForecastingCategoryMapping
+#Fields
+**/Asset/fields/OwnerId.field-meta.xml
+#Record Types
+**/Idea/recordTypes/InternalIdeasIdeaRecordType.recordType-meta.xml
+#Quick Actions
+**/quickActions/Lead.SocialPublisher.quickAction-meta.xml
+**/quickActions/Case.SocialPublisher.quickAction-meta.xml
+**/quickActions/SocialPost.SocialPublisher.quickAction-meta.xml
+**/quickActions/Campaign.Child_Campaign.quickAction-meta.xml
+#Layouts
+**/layouts/Campaign-Campaign Layout.layout-meta.xml
+**/layouts/CollaborationGroup-Group Layout.layout-meta.xml
+**/layouts/EmailMessage-Email Message Layout.layout-meta.xml
+**/layouts/Knowledge__kav-FAQ - Reader.layout-meta.xml
+**/layouts/Knowledge__kav-Procedure - Author.layout-meta.xml
+**/layouts/Knowledge__kav-Procedure - Reader.layout-meta.xml
+**/layouts/Knowledge__kav-FAQ - Author.layout-meta.xml
+**/layouts/Case-Case Layout.layout-meta.xml
+**/layouts/Case-Custom Case Layout.layout-meta.xml
+**/layouts/Event-Event Layout.layout-meta.xml
+**/layouts/ProfileSkill-Skill Layout.layout-meta.xml
+**/layouts/ProfileSkillEndorsement-Endorsement Layout.layout-meta.xml
+**/layouts/ProfileSkillUser-Skill User Layout.layout-meta.xml
+**/layouts/WorkAccess-Access Layout.layout-meta.xml
+**/layouts/WorkBadge-Badge Layout.layout-meta.xml
+**/layouts/WorkBadge-Badge Received Layout 192.layout-meta.xml
+**/layouts/WorkBadgeDefinition-Badge Definition Layout.layout-meta.xml
+**/layouts/WorkBadgeDefinition-Badge Layout 192.layout-meta.xml
+**/layouts/WorkThanks-Thanks Layout.layout-meta.xml
+#Security Settings
+**/settings/Security.settings-meta.xml
+#Translations
+**/objectTranslations/Knowledge__kav**
+#List Views
+**/listViews/*
+#Communities
+**/communities/Internal Community.community-meta.xml
+#App Menus
+**/appMenus/Salesforce1.appMenu-meta.xml
+#Duplicate rule
+**/duplicateRules/*

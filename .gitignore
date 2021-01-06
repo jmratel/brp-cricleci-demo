@@ -1,0 +1,35 @@
+#OSX-specific exclusions
+.[dD][sS]_[sS]tore
+
+#Sublime nature exclusions
+*.sublime-workspace
+*.sublime-project
+
+#MavensMate nature exclusions
+debug/*
+resource-bundles/*
+mm.log
+*.sublime-project
+*.sublime-settings
+
+#SFDX
+.sfdx/
+.forceCode/
+sfdx-project.json
+force.json
+
+#VS Code
+.vscode/
+
+#OPTIONAL Apex scripts exclusion
+# - Rule 1 excludes the contents of the apex-scripts folder
+# - Rule 2 adds in NAMED apex scripts
+# Together: excludes scripts run though MavensMate’s
+#  execute anonymous functionality, while keeping named scripts
+apex-scripts/*
+!apex-scripts/*.cls
+**/.localHistory
+*.sfuo
+TestCache.xml
+TestsResultsCache.xml
+src/main/default/lwc/jsconfig.json
