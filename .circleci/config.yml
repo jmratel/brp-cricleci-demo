@@ -1,0 +1,54 @@
+version: 2.1
+orbs:
+  sfdx: circleci/salesforce-sfdx@1.0
+  python: circleci/python@1.1.0
+jobs:
+  checkout_and_install_python:
+    executor: python/default
+    steps:
+      - checkout
+      - python/install-packages:
+          app-dir: .
+          args: lxml
+          pkg-manager: pip
+      - run:
+          name: Create shared folder and copy
+          command: |
+            mkdir -p /tmp/circleci/code
+            cp -rv . /tmp/circleci/code
+      - persist_to_workspace:
+          root: /tmp/circleci/code
+          paths:
+            - .
+
+  deploy_check_only:
+    executor: sfdx/default
+    steps:
+      - attach_workspace:
+          at: /tmp/circleci/code
+      - run:
+          name: Move directory
+          command: | 
+            cd /tmp/circleci/code
+            ls -a
+      - sfdx/install
+      - sfdx/auth:
+          defaultdevhubusername: ${SFDX_USERNAME}
+          defaultusername: ${SFDX_USERNAME}
+      - run:
+          name: Deploy check only
+          command: |
+            cd /tmp/circleci/code
+            ls -a
+            sfdx force:source:deploy --manifest 'manifest/package.xml' --wait 100 --testlevel RunLocalTests --checkonly --targetusername ${SFDX_USERNAME} --verbose --json
+
+workflows:
+  basic-test:
+    jobs:
+      - checkout_and_install_python
+      - deploy_check_only:
+          requires:
+            - checkout_and_install_python
+          filters:
+            branches:
+              only: master
